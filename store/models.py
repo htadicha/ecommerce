@@ -10,13 +10,16 @@ class Customer(models.Model):
 	def __str__(self):
 		return self.name
 
+
 class Product(models.Model):
 	name = models.CharField(max_length=200)
 	price = models.FloatField()
 	digital = models.BooleanField(default=False,null=True, blank=True)
+	image = models.ImageField(null=True, blank=True)
 
 	def __str__(self):
 		return self.name
+
 class Order(models.Model):
 	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
 	date_ordered = models.DateTimeField(auto_now_add=True)
@@ -31,6 +34,8 @@ class OrderItem(models.Model):
 	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
 	quantity = models.IntegerField(default=0, null=True, blank=True)
 	date_added = models.DateTimeField(auto_now_add=True)
+
+
 class ShippingAddress(models.Model):
 	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
 	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
