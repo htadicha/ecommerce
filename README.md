@@ -2,7 +2,7 @@
 
 Project milestone 4 for Code Institute Full-stack development program.
 This project is a Full Stack website built using the Django framework. Ecommerce is a platform that provides user solution so that they will be able to buy online with all the ecommerce capabilities. The website is fully functional with logged in users and guest user checkout capabilities. Guest users will have the ability to check out with cookies set up.
-It is believed that a good website user should always give user  the ability to checkout without creating an account. Cookies helps us make this a possibility
+It is believed that a good website  should always give user  the ability to checkout without creating an account. Cookies helps us make this a possibility
 
 [Live Project Here](https://tasty-blog-portfolio-project-4.herokuapp.com/)
 
@@ -93,37 +93,38 @@ README Table Content
 1. Navigate around the site and easily view the desired content.
 2. View a list of available products to purschase and choose accordingly.
 3. Search for products.
-4. can add roucts to cart and remove conten.
-5. Register for an account to avail of the services offered to members.
-6. View the number of likes on a recipe thereby showing which is most popular.
-7. View comments on recipes so that I can read other users opinions.
+4. can add products to cart and remove accordingly.
+5. I can view cart and see the totals in the cart page.
+6. I can control number with the upward and downward arrow to add or reduce the number of products.
+7. I can checkout and fill in correct address in the checkout section
 
 * As logged in website user, I can:
 
-1. Like/unlike recipes marking the recipes I enjoyed.
-2. Comment on recipes and give my opinion about the posts.
-3. Delete my previous comments.
-4. Manage my profile by updating my details and user image.
-5. Share my favourites cookbooks by posting them on the Books Page.
-6. Edit my favourite cookbook posted previously.
-7. Delete my favourite cookbook posted previously.
-8. Logout from the website.
+1. Navigate around the site and easily view the desired content.
+2. View a list of available products to purschase and choose accordingly.
+3. Search for products.
+4. can add products to cart and remove accordingly.
+5. I can view cart and see the totals in the cart page.
+6. I can control number with the upward and downward arrow to add or reduce the number of products.
+7. I can checkout and fill in correct address in the checkout section, without having to fill my already available login information.
 
 * As a website superuser, I can:
 
-1. Create and publish a new recipe.
-2. Create draft recipe posts that can be reviewed and finalised later.
-3. Create a new user, recipes, author and categories.
-4. Delete user, recipes, author, categories and comments.
-5. Approve user's comments.
-6. Edit user's favourite cookbook that was posted previously.
-7. Delete user's favourite cookbook that was posted previously.
-8. Change the website permissions for a user.
+1. Create and post new products.
+2. I can control user access.
+3. Create a new user.
+4. Delete user, products and change prices.
+5. Change the website permissions for a user.
+6. Navigate around the site and easily view the desired content.
+7. View a list of available products to purschase and choose accordingly.
+8. Search for products.
+9. can add products to cart and remove accordingly.
+10. I can view cart and see the totals in the cart page
 
 ### Agile Methodology
 
 All functionality and development of this project were managed using GitHub which Projects can be found
-[here](https://github.com/PedroCristo/portfolio_project_4/issues)
+[here](https://github.com/htadicha/ecommerce/issues)
 
 ### The Scope
 
