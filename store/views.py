@@ -51,6 +51,14 @@ def cart(request):
 			order['get_cart_total'] += total
 			order['get_cart_items'] += cart[i]['quantity']
 
+			item = {
+				'id':product.id,
+				'product':{'id':product.id,'name':product.name, 'price':product.price, 
+				'imageURL':product.imageURL}, 'quantity':cart[i]['quantity'],
+				'digital':product.digital,'get_total':total,
+				}
+			items.append(item)
+
 
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
 	return render(request, 'store/cart.html', context)
