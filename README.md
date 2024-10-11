@@ -1,10 +1,8 @@
-# Tasty Blog - Introduction
+# Ecommerce - Introduction
 
 Project milestone 4 for Code Institute Full-stack development program.
-This project is a Full Stack website built using the Django framework. Tasty Blog is a recipe
-book where users can look or search for a recipe to prepare. When the user is logged in they can also 
-like/unlike a post and comment on a post. They can also share their favourite cookbooks by adding a post 
-on the Books Page and upload or update their user image and details.
+This project is a Full Stack website built using the Django framework. Ecommerce is a platform that provides user solution so that they will be able to buy online with all the ecommerce capabilities. The website is fully functional with logged in users and guest user checkout capabilities. Guest users will have the ability to check out with cookies set up.
+It is believed that a good website user should always give user  the ability to checkout without creating an account. Cookies helps us make this a possibility
 
 [Live Project Here](https://tasty-blog-portfolio-project-4.herokuapp.com/)
 
@@ -13,7 +11,7 @@ on the Books Page and upload or update their user image and details.
 
 README Table Content
 
-- [Tasty Blog - Introduction](#tasty-blog---introduction)
+- [Ecommerce - Introduction](#Ecommerce---Introduction)
   - [User Experience - UX](#user-experience---ux)
     - [User Stories](#user-stories)
     - [Agile Methodology](#agile-methodology)
@@ -93,9 +91,9 @@ README Table Content
 * As a website user, I can:
 
 1. Navigate around the site and easily view the desired content.
-2. View a list of recipes and choose accordingly.
-3. Search recipes to find specific recipes.
-4. Click on post to read the recipe details.
+2. View a list of available products to purschase and choose accordingly.
+3. Search for products.
+4. can add roucts to cart and remove conten.
 5. Register for an account to avail of the services offered to members.
 6. View the number of likes on a recipe thereby showing which is most popular.
 7. View comments on recipes so that I can read other users opinions.
