@@ -88,7 +88,7 @@ README Table Content
 
 ### User Stories
 
-* As a website user, I can:
+* As a website visitor, I can:
 
 1. Navigate around the site and easily view the desired content.
 2. View a list of available products to purschase and choose accordingly.
@@ -96,7 +96,8 @@ README Table Content
 4. can add products to cart and remove accordingly.
 5. I can view cart and see the totals in the cart page.
 6. I can control number with the upward and downward arrow to add or reduce the number of products.
-7. I can checkout and fill in correct address in the checkout section
+7. I can checkout and fill in correct address in the checkout section.
+8. I can leave the website and still have items in cart in the next visit(using my browzer cookies)
 
 * As logged in website user, I can:
 
