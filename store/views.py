@@ -59,6 +59,9 @@ def cart(request):
 				}
 			items.append(item)
 
+			if product.digital == False:
+				order['shipping'] = True
+
 
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
 	return render(request, 'store/cart.html', context)
