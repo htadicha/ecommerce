@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+<script src="{% static 'accounts/script.js' %}" defer></script>
+
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Log In</button>
+</form>
+<div class="bottom-link">
+    Don't have an account? <a href="{% url 'sign_up' %}" id="signup-link">Signup</a>
+</div>
