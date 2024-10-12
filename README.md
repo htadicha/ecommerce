@@ -95,32 +95,33 @@ README Table of Content
 3. Search for products.
 4. can add products to cart and remove accordingly.
 5. I can view cart and see the totals in the cart page.
-6. I can control number with the upward and downward arrow to add or reduce the number of products.
-7. I can checkout and fill in correct address in the checkout section.
-8. I can leave the website and still have items in cart in the next visit(using my browzer cookies)
+6. I can sign-up to make purchase
 
-* As logged in website user, I can:
+* As logged in user, I can:
 
 1. Navigate around the site and easily view the desired content.
 2. View a list of available products to purschase and choose accordingly.
 3. Search for products.
 4. can add products to cart and remove accordingly.
 5. I can view cart and see the totals in the cart page.
-6. I can control number with the upward and downward arrow to add or reduce the number of products.
-7. I can checkout and fill in correct address in the checkout section, without having to fill my already available login information.
+6. I can control number of contents with the upward and downward arrow to add or reduce the number of products from cart page.
+7. I can checkout and fillin correct address in the checkout section, without having to fill my already available login information.
+8. I can log in
 
 * As a website superuser, I can:
 
 1. Create and post new products.
 2. I can control user access.
-3. Create a new user.
+3. Create a new user tied to a customer instance.
 4. Delete user, products and change prices.
 5. Change the website permissions for a user.
 6. Navigate around the site and easily view the desired content.
 7. View a list of available products to purschase and choose accordingly.
 8. Search for products.
 9. can add products to cart and remove accordingly.
-10. I can view cart and see the totals in the cart page
+10. I can view cart and see the totals in the cart page.
+11. I can edit product names, prices and images
+12. I can perfrom CRUD operation in the site
 
 ### Agile Methodology
 
@@ -131,33 +132,42 @@ All functionality and development of this project were managed using GitHub whic
 
 #### Main Site Goals
 
-* To provide users with a good experience when using the food recipes website.
+* To provide users with a good experience when using the ecommerce website.
 * To provide users with a visually pleasing website that is intuitive to use and easy to navigate.
 * To provide a website with a clear purpose.
-* To provide role-based permissions that allows user to interact with the website.
-* To provide tools that allow users to search for recipes.
+* To provide role-based permissions that allows user to interact with the website with signed user having an additional layer of advantage of easily checking out.
+* To provide tools that allow users to search for products through our search button.
+
+#### Additional functionality provided by the site
+- **Product Listing and Sales:** Display various products (e.g., electronics, shoes, shirts, accessories) that users can browse, search for, and purchase.
+
+- **User Authentication:** Allow users to sign up, log in, and log out. After authentication, users can manage their shopping activities, such as adding/removing items from their cart.
+
+- **Cart Management for registered Users:** Enable registered users to add items to a cart, review them, adjust quantities, and remove items.
+
+- **Checkout Process for registered Users:** Allow users to proceed to checkout, where they can finalize their orders and make payments.
+
+- **Search Functionality:** Provide a search feature for users(both guest and registered) to find products. If a product isn’t found, an appropriate message will be displayed.
+- **User Data Management:** Safeguard user data and ensure smooth navigation through features like customer profiles and order history by the admin panel.
 
 ## Design
 
 #### Colours
 
-![Colours Palete](./assets/readme/extras/tasty_blog_colors_palete.png)<br>
+![Colours Palete](./static/images/color_palete.png)<br>
 
-* The colour scheme is kept simple by opting for a combination of white text set against the image
-background and black text against the white background. For the navbar was set as a white background
-colour that changes when the user scrolls. For a linear gradient, 3 colours were used dark
-blue, orange and purple. This gradient is also used as a search box background. To highlight
-the icons an interactive colour set of light blue was used.
+* The colour scheme is kept simple by opting for a combination of black set against the image
+background and black text against the white background. For the navbar was set as a light green background
+with yellow stripes on login/signup button and and green used in the seach border with white in the search bar.
+The sign in and login page has blue button and hperlink of blue with black and whiel background with black text set against white background.
 
 #### Typography
 
-* The Lato font is used as the main font for the whole project and the Kaushan font is used to
-display the word enjoy in the Post Details and About pages.
+* The 'Poppins', sans-serif is used as the main font for the whole project and with default bootstrap theme used for the most of the part of the texts.
 
 #### Imagery
 
-* All the imagery is related to the recipes and website design. Only 7 images are static.
-The remaining imagery will be uploaded by the author to the database.
+* All the imagery is related to the products and website design with functionality built in the store template.Images are uploaded by admin upon product creation
 
 ### Wireframes
 
