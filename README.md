@@ -213,9 +213,13 @@ Form validation: Ensures that users enter valid information during login or sign
 **Product management:** Admin can add, update, or delete products in the store.
 **Order management:** Admin can view, edit, or complete customer orders.
 **Customer management:** Admin can view and manage customer information and associated orders.
+#### admin creating items
+
 ![Admin Create Item](./static/images/admin_add.png)
+#### admin creating items
 ![Admin Update Item](./static/images/admin_changed.png)
-![Admin Delete Item](./assets/readme/extras/tasty_blog_superuser.jpg)
+#### admin creating items
+![Admin Delete Item](.static/images/admin_deletedItems.png)
 
 ## Technologies Used
 
@@ -334,15 +338,13 @@ App
 1. Create a runtime.txt `python-3.8.13`
 2. Create a Procfile `web: gunicorn your_project_name.wsgi`
 3. When development is complete change the debug setting to: `DEBUG = False` in settings.py
-4. In this project the summernote editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = SAMEORIGIN `to
-   settings.py.
-5. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+4. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
 
 ## Forking This Project
 
 * Fork this project by following the steps:
 
-1. Open [GitHub](https://github.com/PedroCristo/portfolio_project_4)
+1. Open [GitHub](https://github.com/htadicha/ecommerce)
 2. Find the 'Fork' button at the top right of the page
 3. Once you click the button the fork will be in your repository
 
@@ -350,7 +352,7 @@ App
 
 * Clone this project by following the steps:
 
-1. Open [GitHub](https://github.com/PedroCristo/portfolio_project_4)
+1. Open [GitHub](https://github.com/htadicha/ecommerce)
 2. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order
 to copy the URL
 3. Once you click the button the fork will be in your repository
@@ -363,20 +365,20 @@ to copy the URL
 
 ### Content
 
-* All food recipes were taken from [BBC Goodfood](https://www.bbcgoodfood.com/recipes)
-* The cookbook’s information and images were sourced from [Eason’s](https://www.easons.com/)
+* All the content picture are taken from  [Floralshirts](https://www.freepik.com/free-photos-vectors/floral-shirt)
 * The images were taken from [Unsplash](https://unsplash.com/)
-* The Tasty Blog logos and favicon are my own design and build
 
 ### Information Sources / Resources
 
 * [W3Schools - Python](https://www.w3schools.com/python/)
 * [Stack Overflow](https://stackoverflow.com/)
 * [Scrimba - Pyhton](https://scrimba.com/learn/python)
+* Google and ChatGPT capabilities leverage during manual testing and debugging for some errors
 
 ## Special Thanks
 
-* Special thanks to my mentor Sandeep Aggarwal, my colleagues at Code Institute, Kasia Bogucka, and Mairéad Gillic for
+* Special thanks to Code institute and My mentor in his previous involvement i was able to apply past knowldge in ths, 
+* my colleagues at Code Institute, Kasia Bogucka, and Mairéad Gillic for
 their assistance throughout this project.
 
 
