@@ -139,6 +139,7 @@ All functionality and development of this project were managed using GitHub whic
 * To provide tools that allow users to search for products through our search button.
 
 #### Additional functionality provided by the site
+
 - **Product Listing and Sales:** Display various products (e.g., electronics, shoes, shirts, accessories) that users can browse, search for, and purchase.
 
 - **User Authentication:** Allow users to sign up, log in, and log out. After authentication, users can manage their shopping activities, such as adding/removing items from their cart.
@@ -179,7 +180,7 @@ Wireframes for this project can be located [here](WIREFRAMES.md)
 
 ## Features
 
-### Home Page
+###  Navigation 
 
 ![Home Page](./assets/readme/features/tasty_blog_home-page.jpg)
 

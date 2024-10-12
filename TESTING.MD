@@ -4,37 +4,18 @@ Back to the [README](README.md)
 * Testing has taken place continuously throughout the development of the project. Each view was tested regularly. 
   When the outcome was not as expected, debugging took place at that point.  
 
-### Python Validation - PEP8
+### Python Validation - PEP*
 * Python testing was done using the PEP8 Online to ensure there were no syntax errors in the project. All python files
 were entered into the online checker and no errors were found in any of the custom codes.
 
 #### Tasty Blog - Posts
-* [admin.py](./assets/readme/test/pep8/posts_pep8_admin.jpg)
-* [apps.py](./assets/readme/test/pep8/posts_pep8_apps.jpg)
-* [models.py](./assets/readme/test/pep8/posts_pep8_models.jpg)
-* [apps.py](./assets/readme/test/pep8/posts_pep8_apps.jpg)
-* [forms.py](./assets/readme/test/pep8/posts_pep8_forms.jpg)
-* [signals.py](./assets/readme/test/pep8/posts_pep8_signals.jpg)
-* [urls.py](./assets/readme/test/pep8/posts_pep8_urls.jpg)
-* [views.py](./assets/readme/test/pep8/posts_pep8_views.jpg)
-* [context_processors.py](./assets/readme/test/pep8/posts_pep8_context_processor.jpg)
 
-#### Tasty Blog - Books
-* [admin.py](./assets/readme/test/pep8/books_pep8_admin.jpg)
-* [forms.py](./assets/readme/test/pep8/books_pep8_forms.jpg)
-* [models.py](./assets/readme/test/pep8/books_pep8_models.jpg)
-* [urls.py](./assets/readme/test/pep8/books_pep8_urls.jpg)
-* [views.py](./assets/readme/test/pep8/books_pep8_views.jpg)
-
-#### Tasty Blog - Tastyblog
-* [asgi.py](./assets/readme/test/pep8/tastyblog_pep8_asgi.jpg)
-* [urls.py](./assets/readme/test/pep8/tastyblog_pep8_urls.jpg)
-* [wsgi.py](./assets/readme/test/pep8/tastyblog_pep8_wsgi.jpg)
-* [settings.py](./assets/readme/test/pep8/tastyblog_pep8_settings.jpg)
-* A few errors were raised in the tastyblog/settings.py file, however these were related to default django authorisation
-code and could not be changed to remove the errors.
-* [manage.py](./assets/readme/test/pep8/pep8_manage.jpg)
-
+* [admin.py](./static/images/admins.pychecker.png)
+* [apps.py](./static/images/apps.pychecker.png)
+* [models.py](./static/images/models_testing.png)
+* [forms.py](.static/images/loginform.pychecker.png)
+* [urls.py](./static/images/urls.pychecker.pngg)
+* [views.py](./static/images/views.pychecker.png)
 
 ### Lighthouse
 Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop.
@@ -62,65 +43,94 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 ![CSS Validation Result](./assets/readme/test/tasty_blog_jquery_validator_results.jpg).
 
 ### Console Results:
-![Console Result](./assets/readme/test/tasty_blog_console_results.jpg).
+![Console Result](./static/images/consoleresults.png).
 * The browser console is clean, no errors are  showing.
 
 ## Manual Testing
+
 ### Frontend
-* The Signup, Login and Logout system has no issues and is working accordingly. It shows the right 
-  interactive message to the users.
-* The Profile Page is working properly. It updates the user information and uploads/updates the 
-  user profile image. It shows the interactive message to the user once the update is complete.
-* The user profile image in the navbar and Post Details page has no issues and shows the user image 
-  when it is uploaded by the user on the Profile Page.
-* All the internal links are working and bring the user to the right page on the website.
-* All the external links are working and bring the user to the right social media page by 
-  opening a new browser tab.
-* The Categories Page shows the recipes filtered by category without issues.
-* The drop-down menu in the navbar shows a list of categories on every page of the website.
-* The contact form on the Contact Page is working without any errors.  It sends an email, 
-  to the info@tastyblog, once the user fills in the form and clicks on the send button. 
-  Both interactive messages for email success or failure are also displayed on the screen.
-* The pagination system is working. It adds another page after 6 posts on the page.
-* On the Post Details Page, the Like/unlike functionality is working without issues and shows 
-  the right interactive message to the user when the heart icon is clicked.
-* The comment form has no issues and it submits a new comment once the form is completed by a
-  registered user. 
-  The comment is displayed once the submit button is pressed. The two interactive messages for 
-  this action are working without errors. 
-* The functionality to delete a message, previously sent by the user or by the superuser, is 
-  working without issues. The Bootstrap model is open to asking the user if they want to delete 
-  the message. Once the action is complete, the interactive message is displayed at the top of the page.
-* The functionality to update a message, previously sent by the user or by the superuser, is 
-  working without issues. A new page is open, to update the comment when the button edit is 
-  pressed. Once the action is complete, the interactive message is displayed at the top of the page. 
-* On the Books Page, the CRUD functionality is working without issues. Logged in users can create a new 
-  post such as update or delete their own posts, also any post can be updated or deleted on this page by the Superuser.  
+
+1. Store Page
+- Test loading of the storepage: Verify that the storepage loads correctly with all the product images rendered correctly image, showing all the navigation and required details in color contrust.
+- Check responsiveness: Test if the page adapts properly to different screen sizes (mobile, tablet, desktop).
+2. Navbar
+- Navigation Links: Test all the navbar links (Store,login, cart Sign Up) to ensure they redirect to the correct pages.
+3. Product Display (Store Page)
+- Product Listing: Ensure that products are displayed in a 3-row flexbox layout.
+- Product name, Image and prices : Check if the images, names, and prices of the      products are displayed correctly.
+- 'Add to Cart' Button: Test the functionality of the "Add to Cart" button to ensure products are added to the cart without refreshing the page.
+- Empty Search Result: Conduct a search for a non-existing product and check if a "No results found" message is displayed.
+4. Search Functionality
+- Search for a product: Test the search bar by typing a product name to confirm relevant results are displayed.
+- No Results Handling: Ensure that if no products match the query, a message is displayed ("No product found").
+5. Cart System
+- Add Products to Cart: Add multiple products to the cart and verify that the cart count updates in the navbar.
+- Remove Products: Remove products from the cart and check if the count and total price update correctly.
+- Cart redirects to the store with continue shopping button hperlinked to the store
+- Cart Persistence: Refreshed the page and verified that the cart items are still intact.
+- Checkout Flow: Proceeded to checkout and tested if the cart items are displayed correctly before submitting.
+6. Login and Signup Pages
+- Form Validation: Test for required fields, invalid inputs (e.g., wrong email format), and correct error messages.
+- Successful Signup: Create a new account, ensured the form redirects to the store page after successful signup.
+- Login Functionality: Log in with a registered account, ensuring a successful redirect to the store page.
+- Invalid Credentials: Try logging in with wrong credentials and checked if an appropriate error message is shown. which is confirmed to be working
+7. Form Validation (Front-End)
+- Login and Signup Forms: Ensured real-time validation of input fields, such as email format.
+8. Mobile Responsiveness
+- Checked layout responsiveness: On various devices (phone, tablet), tested how the storepage, product listings, checkout page, cart and login and signup page and forms resize and reflow.
+- Navbar: Ensure the navbar collapses properly into a hamburger menu on smaller screens.
+- Forms and Buttons: Verified that all forms (login, signup, add to cart) remain usable and do not break on mobile devices.
+10. Cross-Browser Testing
+- Test on different browsers: Ensure that the site works seamlessly on major browsers (Chrome, Firefox, Safari, Edge).
+- Check for styling issues: Look for any misalignments, font issues, or broken layouts in different browsers.
+11. Error Messages and Feedback
+- Error Handling: Simulate user errors (invalid input, missing required fields) and verify that user-friendly error messages are displayed.
+- Success Messages: Ensure success messages are shown when actions like signup, login, and cart updates are successful. 
 
 ### Backend/Admin Panel
-* I have tested the Admin Panel repeatedly since the start of the project development. All the models are working without issues.  
-  I have created, deleted, and updated data in all models without errors. The models have the behavior expected for what they were built for.
-* Whenever a user comments on a post or submits a book post the Superuser has to approve it before it will be displayed on the website. This functionality is 
-  working without issues.
-* When the author is posting a new recipe all the required fields have to be filled otherwise the author can't submit the post to the database.
 
-### Manual Test Case
-The Test case for this project can be found [here](TEST_CASE.md)
-
-## Bugs
-### Terminal Bug
-#### Comment Model 
-![Comment Model](./assets/readme/extras/comments_model_issue.jpg)
-#### Terminal Error
-![Comment Model - Terminal](./assets/readme/extras/terminal_comment_model_issue.jpg)
-
-* While I was developing the project I tried to add a comment profile Image to the comments model by adding a 
-  foreign key related to the profile model. When I was doing the migrations, the terminal required a default 
-  number for the new foreign key.  I added the number zero however this was not the correct default option. 
-  When I ran the migrations I got an error message on the terminal, saying that "(post_id)=(7) is not present in the table".
+* I have tested the Admin Panel repeatedly since the start of the project development. All the models are working without issues.I have created, deleted, and updated data in all models without errors. The models have the behavior expected for what they were built for.
 
 ### Fixed Bug
 
-* I spent a considerable amount of time trying to rectify this error. I sought advice from my slack community colleagues and researched 
-  an online solution. I then called the Code Institute Tutor Assistance. I was advised, by the tutor, to reset my database on Heroku and 
-  then run migrate on the terminal. I followed the advice and I fixed the issue by resetting my project database.
+* while i was developing the projects i went through the following bugs and was able to fix them with some help from peers and research.
+
+1. NoReverseMatch for 'sign_up'
+**Error:**
+Reverse for 'sign_up' not found.
+**Solution:**
+Add the correct URL pattern for the 'sign_up' view in your urls.py file.
+2. NameError: 'LoginForm' is not defined
+**Error:**
+The LoginForm class was not defined or imported.
+**Solution:**
+Define and import the LoginForm class in your views.py.
+3. NameError: 'redirect' is not defined
+**Error:**
+The redirect function was not imported.
+**Solution:**
+Import the redirect function from Django.
+
+4. CSRF Token Error
+**Error:**
+CSRF token from POST incorrect.
+**Solution:**
+Ensured the form includes the {% csrf_token %} tag to provide a valid CSRF token.
+
+5. Login Not Redirecting After Successful Login
+**Error:**
+After login, the user was not redirected to the store page.
+**Solution:**
+Ensured the store URL is correctly named and referenced in the redirect function.
+
+6. Search Query Not Showing 'No Results Found..'
+**Error:**
+No message was displayed when no products matched the search query.
+**Solution:**
+Added logic to display a "No results found" message when the search returns no products.
+
+7. Incorrect Form Handling for Login and Signup
+**Error:**
+Login and signup forms did not handle validation correctly, causing login or signup failures.
+**Solution:**
+Ensured proper validation checks in the form handling logic before authentication or user creation.
