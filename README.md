@@ -154,8 +154,7 @@ All functionality and development of this project were managed using GitHub whic
 ## Design
 
 #### Colours
-
-![Colours Palete](./static/images/color_palete.png)<br>
+![Colours Palete](./static/images/color_palete.png)
 
 * The colour scheme is kept simple by opting for a combination of black set against the image
 background and black text against the white background. For the navbar was set as a light green background
@@ -182,95 +181,10 @@ Wireframes for this project can be located [here](WIREFRAMES.md)
 
 ###  Navigation 
 
-![Home Page](./assets/readme/features/tasty_blog_home-page.jpg)
+![Navigation Page](./static/images/navigation.png)
 
-* The hero image welcomes the user with a short message advertising what the website is about. These
-are 3 carousel images with a button. When the button is pressed, it brings the user down to the highlighted recipes.<br>
+* The navigation has the name of the dashboard and **link** to the store and hyperlinked, login and signup button and a cart icon hperlinked to cart page
 
-### Home Page - Highlight Posts
-
-![Home Page - Highlight Posts](./assets/readme/features/tasty_blog_home_page_highilights-.jpg)
-
-* In the highlighted posts, users can see a selection of 6 recipes. These recipes are
-chosen by the site admin by clicking the featured box in the post database.<br>
-
-### About Page
-
-![About Page](./assets/readme/features/tasty_blog_about_page.jpg)
-
-* The About Page gives, users information about the Tasty Blog website. It introduces the users to the
-website. It also details the main purpose and the goal of the blog.<br>
-
-### Blog Page
-
-![Blog Page](./assets/readme/features/tasty_blog_page.jpg)
-
-* On the Blog Page, users have access to the full recipes posts available on the website.
-The user can choose to see the recipe detail by clicking on the recipe card.<br>
-
-### Post Detail Page - Top
-
-![Post Detail Page - Top](./assets/readme/features/tasty_blog_post_detail_1_page.jpg)
-
-* At the top of the Post Details Page, users can see the post's main
-image and they can also have access to information about the post. The
-post information includes category, recipe name, rating stars,
-time to prepare, author name and image, posted date and the
-option to like/unlike the post. It will also show how many likes and
-comments the post has received.<br>
-
-### Post Detail Page - Steps
-
-![Post Detail Page - Steps](./assets/readme/features/tasty_blog_post_detail_2_page.jpg)
-
-* In this page section, users can read the ingredients and follow the steps to complete the recipe.<br>
-
-### Post Detail Page - Comments
-
-![Post Detail Page - Comments](./assets/readme/features/tasty_blog_post_detail_comments_page.jpg)
-
-* At the bottom of this page, users can read the comments posted by other users. If the user is logged in or is a 
-superuser they have access to the buttons for deleting or updating comments.
-
-### Edit Comments Page
-
-![Edit Comments Page](./assets/readme/features/tasty_blog_edit_comments_page.jpg)
-
-* On this page, users are allowed to comment, delete and edit their own post comments. The website superuser can 
-  delete or update any comments on the blog without having to access the admin panel.
-
-### Contact Page
-
-![Contact Page](./assets/readme/features/tasty_blog_contact_page.jpg)<br><br>
-
-* The Contact Page allows users to have access to the Tasty blog
-contact details. Users can also send an email to info@tastyblog by
-using the contact form available on this page.
-
-### Categories Page
-
-![Categories Page ](./assets/readme/features/tasty_blog_categories_page.jpg)<br><br>
-
-* On the Categories Page, users can see the categories available in the blog and filter the posts by category.
-
-### Categories Results
-
-![Categories Results Page](./assets/readme/features/tasty_blog_categories_results_page.jpg)
-
-* On the Categories Results Page, users can access the post filtered by the chosen category.
-  
-### Books Page
-
-![Books Page](./assets/readme/features/tasty_blog_books_page.jpg)
-
-* On this page, registered users can see favourite books posted by other users. If they had already published 
-  a post they are allowed to edit or delete their own posts
-
-### Add/Edit Books Page
-
-![Add/Edit Book Page](./assets/readme/features/tasty_blog_add_book_page.jpg)
-
-On this page, registered users can fill out the form to add or edit a post with their favourite cookbooks.
 
 ### Search Box
 
@@ -352,134 +266,14 @@ user's experience.
 ![Sign up](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_signup.jpg)
 
 * When users sign up to the website they will see a message at the top of the page saying "Successfully signed in as
-(username)".<br>
+(username)".
 
 ### Login
 
 ![Login](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_login.jpg)
 
 * When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as
-(username)".<br>
-
-### Logout
-
-![Logout](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_logout.jpg)
-
-* When users log out of the website they will see a message at the top of the page saying "You have signed out".<br>
-  
-### Profile Update
-
-![Profile Update](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_profile_update.jpg)
-
-* When users update their profile they will see a message at the top of the page saying that their account has been updated.<br>
-
-### Like Post
-
-![Like Post](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_like_post.jpg)
-* *When users are logged in to the website they can like a post and they will see a message at the top of the page 
-  saying "You have liked this post".<br>
-
-### Unlike Post
-
-![Unlike Post](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_unlike_post.jpg)
-
-* When users are logged in to the website they can unlike a post that has been liked by the user and they will see a message 
-  at the top of the page saying "You have unliked this post".<br>
-
-### Comment Post
-
-![Comment Post](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_sent_1.jpg)
-
-* When users are logged in to the website they can comment on a post and after they submit the comment they will see a 
-  message at the top of the page saying "Your comment was sent successfully and is awaiting approval".<br>
-
-### Comment Post - 2
-
-![Comment Post - 2](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_sent_2.jpg)
-
-* After a user submits a comment, they will see a message over the input comment saying "Thanks (username). Your 
-  comment is awaiting approval! <br>
-
-### Delete/Edit Comment
-
-![Delete Comment](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_delete_1.jpg)
-
-* When users are logged in to the website and they have previously posted a comment or if the user is a superuser they will see the 
-Delete and Edit buttons at the bottom of comments.<br>
-
-### Delete Comment - 1
-
-![Delete Comment - 2](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_delete_2.jpg)
-
-* If they wish to delete their comment, they can press the button Delete and a Bootstrap box model will pop up with the message 
-  "Are you sure you want to delete your comment?".<br>
-
-### Delete Comment - 2
-
-![Delete Comment - 3](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_delete_3.jpg)
-
-* After pressing the Delete button again inside the Bootstrap box model they will see a message on the 
-  top of the page, "Your comment was deleted successfully".<br>
-
-### Edit Comment
-
-![Edit Comment](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_comment_edit.jpg)
-
-* After pressing the Update, users will see a message on the top of the page, "The comment was successfully updated".<br>
-
-### Email Sent - Success
-
-![Email Sent - Success](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_email_sent_2.jpg)
-
-* After users submit the form to info@tastyblog successfully, they will see the message, "Thanks for your email! 
-  We will contact you as soon as possible".<br>
-
-### Email Sent - Failed
-
-![Email Sent - Failed](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_email_sent.jpg)
-
-* If the email was not submitted successfully, users will see the message, "Sorry, something went wrong! 
-  Try to submit the email again".<br>
-
-### Add Book
-
-![Add Book](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_add_book.jpg)  
-
-* When users are logged in to the website they can publish a post with a favourite cookbook and after they submit the 
-post they will see a message at the top of the page saying "Your post was sent successfully and is awaiting approval".<br>
-
-### Edit Book
-
-![Edit Book](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_book_edit.jpg)  
-* When users are logged in to the website they can edit their own previously published posts and they will see the message 
-  "The post was successfully updated" after pressing the Submit button.<br>
-
-### Delete Book 1 
-
-![Delete Book 1](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_book_delete_2.jpg)
-When users are logged in to the website and they wish to delete their posts, they can press the button Delete and a 
-Bootstrap box model will pop up with the message "Are you sure you want to delete your post?".<br>  
-
-### Delete Book 2
-
-![Delete Book 2](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_book_delete.jpg)  
-
-* After pressing the Delete button again inside the Bootstrap box model they will see a message on the 
-  top of the page, "Your post was deleted successfully".<br>
-
-### Empty Search
-
-![Empty Search](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_profile_empty_search.jpg)
-
-* Any user can search for a keyword using the input search and if the search is done with an empty input they will see a
-  message saying, "You forgot to search a recipe. Please try searching again.".<br>
-
-### No Search Found
-
-![No Search Found](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_profile_no_search_found.jpg)
-
-* And if there are no results matching or similar to the keyword, the user will see the following message, "We are sorry. 
-  There are no searches for (keyword) on the website. Try the search again".<br>
+(username)".
 
 ## Admin Panel/Superuser
 ![No Search Found](./assets/readme/extras/tasty_blog_superuser.jpg)
