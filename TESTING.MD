@@ -4,7 +4,7 @@ Back to the [README](TESTING.md)
 * Testing has taken place continuously throughout the development of the project. Each view was tested regularly. 
   When the outcome was not as expected, debugging took place at that point.  
 
-### Python Validation - PEP*
+### Python Validation - PEP
 * Python testing was done using the PEP8 Online to ensure there were no syntax errors in the project. All python files
 were entered into the online checker and no errors were found in any of the custom codes.
 
@@ -21,23 +21,23 @@ were entered into the online checker and no errors were found in any of the cust
 Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop.
 
 ##### Desktop Results:
-![Lighthouse Mobile Result](./assets/readme/test/tasty_blog_lighthouse_desktop_results.jpg).
+![Lighthouse Mobile Result](./static/images/lightoutest.png).
+![Lighthouse Mobile Result](./static/images/lighthouse_performance.png).
 
 ### HTML Validation
-![HTML Validation Result](./assets/readme/test/tasty_blog_html_validator_results.jpg).
+![HTML Validation](./static/images/htmlvalidation.png)
+HTML was validated using W3C Jigsaw validation service. only 3 warning were displayed and it is associated template we used to access our views which will not affect the html performance.
 
 ### CSS Validation
 
-![CSS Validation Result](./assets/readme/test/tasty_blog_css_validator_results.jpg).
-![CSS Validation Result](./assets/readme/test/tasty_blog_css_validator_results_warnings.jpg).
-* Custom CSS was validated using W3C Jigsaw validation service. Forty-three warnings were displayed, however, 
-  these are related to Google Fonts and vendor extension prefixes which will not affect the CSS performance.
+![CSS Validation Result](./static/images/cssvalidator.png).
+![CSS Validation Result](./static/images/bootsrapcssvalidation.png).
+* Custom CSS was validated using W3C Jigsaw validation service. 2 warnings were displayed, however, relating to results of text area which will not affect the CSS performance.
 
 ### JavaScript Validation
-![CSS Validation Result](./assets/readme/test/tasty_blog_js_validator_results.jpg).
+![JS Validation Result](./assets/readme/test/tasty_blog_js_validator_results.jpg).
 
-### jQuery Validation
-![CSS Validation Result](./assets/readme/test/tasty_blog_jquery_validator_results.jpg).
+
 
 ### Console Results:
 ![Console Result](./static/images/consoleresults.png).
@@ -77,10 +77,10 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 - Checked layout responsiveness: On various devices (phone, tablet), tested how the storepage, product listings, checkout page, cart and login and signup page and forms resize and reflow.
 - Navbar: Ensure the navbar collapses properly into a hamburger menu on smaller screens.
 - Forms and Buttons: Verified that all forms (login, signup, add to cart) remain usable and do not break on mobile devices.
-10. Cross-Browser Testing
+9. Cross-Browser Testing
 - Test on different browsers: Ensure that the site works seamlessly on major browsers (Chrome, Firefox, Safari, Edge).
 - Check for styling issues: Look for any misalignments, font issues, or broken layouts in different browsers.
-11. Error Messages and Feedback
+10. Error Messages and Feedback
 - Error Handling: Simulate user errors (invalid input, missing required fields) and verify that user-friendly error messages are displayed.
 - Success Messages: Ensure success messages are shown when actions like signup, login, and cart updates are successful. 
 
