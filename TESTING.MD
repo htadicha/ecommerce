@@ -1,5 +1,5 @@
 # Testing
-Back to the [README](TESTING.md)
+Back to the [README](https://github.com/htadicha/ecommerce/blob/main/TESTING.MD)
 
 * Testing has taken place continuously throughout the development of the project. Each view was tested regularly. 
   When the outcome was not as expected, debugging took place at that point.  
@@ -18,13 +18,16 @@ were entered into the online checker and no errors were found in any of the cust
 * [views.py](./static/images/views.pychecker.png)
 
 ### Lighthouse
+
 Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on Desktop.
 
 ##### Desktop Results:
 ![Lighthouse Mobile Result](./static/images/lightoutest.png).
+
 ![Lighthouse Mobile Result](./static/images/lighthouse_performance.png).
 
 ### HTML Validation
+
 ![HTML Validation](./static/images/htmlvalidation.png)
 HTML was validated using W3C Jigsaw validation service. only 3 warning were displayed and it is associated template we used to access our views which will not affect the html performance.
 
@@ -32,15 +35,17 @@ HTML was validated using W3C Jigsaw validation service. only 3 warning were disp
 
 ![CSS Validation Result](./static/images/cssvalidator.png).
 ![CSS Validation Result](./static/images/bootsrapcssvalidation.png).
+
 * Custom CSS was validated using W3C Jigsaw validation service. 2 warnings were displayed, however, relating to results of text area which will not affect the CSS performance.
 
 ### JavaScript Validation
+
 ![JS Validation Result](./assets/readme/test/tasty_blog_js_validator_results.jpg).
 
-
-
 ### Console Results:
+
 ![Console Result](./static/images/consoleresults.png).
+
 * The browser console is clean, no errors are  showing.
 
 ## Manual Testing
