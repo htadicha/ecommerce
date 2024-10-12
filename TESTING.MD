@@ -23,9 +23,6 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 ##### Desktop Results:
 ![Lighthouse Mobile Result](./assets/readme/test/tasty_blog_lighthouse_desktop_results.jpg).
 
-###### Mobile Results:
-![Lighthouse Desktop Result](./assets/readme/test/tasty_blog_lighthouse_mobile_results.jpg).
-
 ### HTML Validation
 ![HTML Validation Result](./assets/readme/test/tasty_blog_html_validator_results.jpg).
 
