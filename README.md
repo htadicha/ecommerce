@@ -175,7 +175,7 @@ Wireframes for this project can be located [here](WIREFRAMES.md)
 
 ## Database Diagram
 
-![Database Diagrama](./assets/readme/extras/tasty_blog_database_diagrama_1.jpg)<br>
+![Database Diagrama](./static/images/database_wireframe.png)<br>
 
 ## Features
 
