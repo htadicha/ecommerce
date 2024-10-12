@@ -281,14 +281,6 @@ Form validation: Ensures that users enter valid information during login or sign
    To add the 2 fonts that were used throughout the project
 * [Balsamiq](https://balsamiq.com/)<br>
    To build the wireframes for the project
-* [PIXLR](https://pixlr.com)<br>
-   To convert the images to webp format
-* [CANVA](https://www.canva.com/)<br>
-   To build the logos for the project
-* [Coolors](https://coolors.co/)<br>
-   To build the colour palette of the project
-* [Emailjs](https://www.emailjs.com/)<br>
-   To send emails from the contact form
 
 ### Testing
 
