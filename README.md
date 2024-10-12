@@ -292,7 +292,7 @@ Form validation: Ensures that users enter valid information during login or sign
 
 ### Testing
 
-Testing results [here](TESTING.md)
+Testing results [here](https://github.com/htadicha/ecommerce/blob/main/TESTING.MD)
 
 ## Creating the Django app
 

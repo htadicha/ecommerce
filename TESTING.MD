@@ -1,5 +1,5 @@
 # Testing
-Back to the [README](https://github.com/htadicha/ecommerce/blob/main/TESTING.MD)
+Back to the [README](https://github.com/htadicha/ecommerce?tab=readme-ov-file)
 
 * Testing has taken place continuously throughout the development of the project. Each view was tested regularly. 
   When the outcome was not as expected, debugging took place at that point.  
