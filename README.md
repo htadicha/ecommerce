@@ -115,10 +115,9 @@ All functionality and development of this project were managed using GitHub whic
 - **User Data Management:** Safeguard user data and ensure smooth navigation through features like customer profiles and order history by the admin panel.
 
 ## Design
-
 #### Colours
-![Colours Palete](./static/images/color_palete.png)
 
+![Colours Palete](./static/images/color_palete.png)
 * The colour scheme is kept simple by opting for a combination of black set against the image
 background and black text against the white background. For the navbar was set as a light green background
 with yellow stripes on login/signup button and and green used in the seach border with white in the search bar.
@@ -151,58 +150,58 @@ Wireframes for this project can be located [here](WIREFRAMES.md)
 
 ### Search Box
 
-![Search Box](./assets/readme/features/tasty_blog_search_page.jpg)
-
-* In this box, the users can search by inputting a keyword in the search tool. This allows the user to try and find 
-  the recipe they are looking for.
+* In this box, the users can search by inputting a keyword in the search tool. This allows the user to try and find the products they are looking for.
 
 ### Search Results Page
+![Search Results Page](./static/images/searchresultpage.png)
 
-![Search Results Page](./assets/readme/features/tasty_blog_search_results_page.jpg)
-
-* On the Search Results Page, users can see the recipes found by their search.  When their recipe is located, the user can go to the 
-  Post Details Page by clicking on the card result.
-
-### Search Results - Input Empty
-
-![Search Results - Input Empty](./assets/readme/features/tasty_blog_search_results_empty_page.jpg)
-
-* On the Search Results Page - Input Empty, users will see this message if their search returns with an empty input.
+* On the Search Results Page, users can see the products found by their search.  When their product is  located
 
 ### Search Results - No Results Found
-
-![Search Results - No Results Found](./assets/readme/features/tasty_blog_search_results_null_page.jpg)
+![Search Results - No Results Found](./static/images/search_noresult.png)
 
 * On the Search Results Page - No Results Found, users will see this message if there is nothing found for the search.
 
+ ## Login and Signup Pages
+**Login:** Allows existing users to sign in with their credentials to access personalized features like managing their cart.
+**Signup:** Enables new users to create an account by providing basic information (name, email, and password).
+Form validation: Ensures that users enter valid information during login or signup.
+
 ### Signup Page
 
-![Signup Page](./assets/readme/features/tasty_blog_signup_page.jpg)
+![Signup Page](./static/images/signup.png)
 
-* On the Signup Page, a new user can sign up for the Tasty Blog website by filling out and then submitting the form.
+* On the Signup Page, a new user can sign up for the the ecommerce website by filling out and then submitting the form.
 
 ### Login Page
 
-![Login Page](./assets/readme/features/tasty_blog_login_page.jpg)
+![Login Page](./static/images/login.png)
 
-* On the Login Page, users can log in to the website by inputting the username and password and have access 
-  to website services for a user registered.
+* On the Login Page, users can log in to the website by inputting the username and password and have accessto website services for a user registered which will give them the ability to add to cart and remove items from cart.
 
-### Logout Page
+### Cart Page
+![Cart page](./static/images/cartpage.png)
+**View cart items:** Displays all the items the user has added to their cart, including quantities and total prices.
+**Update cart:** Allows users to modify the quantity of items in the cart through updown arrow.
+**View cart totals:** Shows the total number of items and the total cost of the items in the cart.
 
-![Logout Page](./assets/readme/features/tasty_blog_logout_page.jpg)
+## Checkout Page
+![Checkout page](./static/images/checkout.png)
+**Review order:** Displays a summary of the cart with items, quantities, and total cost.
+**Enter shipping details:** Provides a form for users to input shipping information.
+**Complete purchase:** Confirms the order and processes payment, marking the order as complete.
+**Be able to go back to cart** allows functionality to be able to go back to cart to update orderItems
 
-* On the Logout Page, users can confirm that they wish to exit the website.
+### Store page
 
-### User Profile Page
+![User Profile Page](./static/images/storepage.png)
 
-![User Profile Page](./assets/readme/features/tasty_blog_user_profile_page.jpg)
+**Product Display:** Lists all available products in the store, showing key details such as the product name, price, and image.
+**Add to Cart:** Allows users to add products to their cart. For authenticated users, items are added to their account's cart. For non-logged-in users, a temporary cart is created using cookies.
+**Product Details:** displaying product price, name and images
 
-* On the Profile Page, users have access to their own information and can update their user name, email and profile image.
 
 ### Navbar
-
-![Navbar](./assets/readme/features/tasty_blog_navbar.jpg)
 
 * The navigation bar is present at the top of every page and houses all links to the various other pages.
 * The options to Register or Log in will change to the option to log out once a user has logged in.
@@ -210,47 +209,13 @@ Wireframes for this project can be located [here](WIREFRAMES.md)
 * A search icon is nested in the navbar and once clicked it will open the search box.
 * The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes smaller.
 
-![Navbar](./assets/readme/features/tasty_blog_navbar_dropdown_menu.jpg)
-* In the navbar users can access the categories list by clicking on the dropdown menu.
-
-### Footer
-
-![Footer](./assets/readme/features/tasty_blog_footer.jpg)
-* On the website footer, users can see basic information about the blog such as contact, social media, 
-  copyright, and a quote about food recipes.
-
-## Messages and Interaction With Users
-
-* Some interactive messages were added to the project to make the navigation on the website easier and to improve the
-user's experience.
-
-### Sign up
-
-![Sign up](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_signup.jpg)
-
-* When users sign up to the website they will see a message at the top of the page saying "Successfully signed in as
-(username)".
-
-### Login
-
-![Login](./assets/readme/features/interactive_messages/tasty_blog_user_interaction_login.jpg)
-
-* When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as
-(username)".
-
 ## Admin Panel/Superuser
-![No Search Found](./assets/readme/extras/tasty_blog_superuser.jpg)
-
-* On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and
-delete the following ones:
-1. Posts
-2. Comments
-3. Author
-4. Categories
-5. Profiles
-6. Books
-   
-*As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users.<br>
+**Product management:** Admin can add, update, or delete products in the store.
+**Order management:** Admin can view, edit, or complete customer orders.
+**Customer management:** Admin can view and manage customer information and associated orders.
+![Admin Create Item](./static/images/admin_add.png)
+![Admin Update Item](./static/images/admin_changed.png)
+![Admin Delete Item](./assets/readme/extras/tasty_blog_superuser.jpg)
 
 ## Technologies Used
 
