@@ -1,5 +1,5 @@
 # Testing
-Back to the [README](https://github.com/htadicha/ecommerce?tab=readme-ov-file)
+Back to the [README](https://github.com/htadicha/ecommerce/blob/main/README.md)
 
 * Testing has taken place continuously throughout the development of the project. Each view was tested regularly. 
   When the outcome was not as expected, debugging took place at that point.  
@@ -8,7 +8,7 @@ Back to the [README](https://github.com/htadicha/ecommerce?tab=readme-ov-file)
 * Python testing was done using the PEP8 Online to ensure there were no syntax errors in the project. All python files
 were entered into the online checker and no errors were found in any of the custom codes.
 
-#### Tasty Blog - Posts
+#### Apps Python models and functions.
 
 * [admin.py](./static/images/admins.pychecker.png)
 * [apps.py](./static/images/apps.pychecker.png)
