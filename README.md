@@ -2,7 +2,8 @@
 
 Project milestone 4 for Code Institute Full-stack development program.
 This project is a Full Stack website built using the Django framework. Ecommerce is a platform that provides user solution so that they will be able to buy online with all the ecommerce capabilities. The website is fully functional with logged in users and guest user checkout capabilities. Guest users will have the ability to check out with cookies set up.
-It is believed that a good website  should always give user  the ability to checkout without creating an account. Cookies helps us make this a possibility
+It is believed that a good website  should always give user  the ability to checkout without creating an account. Cookies helps us make this a possibility.
+The user of the website each will have different experience based, whether the user is a visitor[can see products, can navigate through the items, search and see what is there, can go to cart]. a registered user has different experience which is everything non registered user has plus, car manipulation capabilities, checkout capalities and super user is the admin which has every capapbility that the registered user has plus being able to perform site management capabilities. 
 
 [Live Project Here](https://tadichaecommercestore-6c140a2ed1bd.herokuapp.com/)
 
