@@ -218,8 +218,8 @@ Form validation: Ensures that users enter valid information during login or sign
 ![Admin Create Item](./static/images/admin_add.png)
 #### admin creating items
 ![Admin Update Item](./static/images/admin_changed.png)
-#### admin creating items
-![Admin Delete Item](.static/images/admin_deletedItems.png)
+#### admin update items
+![Admin Delete Item](./static/images/admin_deletedItems.png)
 
 ## Technologies Used
 
