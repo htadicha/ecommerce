@@ -9,7 +9,7 @@ It is believed that a good website  should always give user  the ability to chec
 <p align="center"><img src="./assets/readme/features/tasty_blog_responsiveness.jpg"
         alt="Tasty Blog webpage on multiple devices"></p>
 
-README Table Content
+README Table of Content
 
 - [Ecommerce - Introduction](#Ecommerce---Introduction)
   - [User Experience - UX](#user-experience---ux)
