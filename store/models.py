@@ -3,13 +3,12 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Customer(models.Model):
-	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
-	name = models.CharField(max_length=200, null=True)
-	email = models.CharField(max_length=200)
+    user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200)
 
-	def __str__(self):
-		return self.name
-
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
 	name = models.CharField(max_length=200)
@@ -82,3 +81,13 @@ class ShippingAddress(models.Model):
 
 	def __str__(self):
 		return self.address
+
+
+# Create a new model for GuestOrder to keep track of guest orders
+class GuestOrder(models.Model):
+    email = models.EmailField(max_length=200)
+    name = models.CharField(max_length=200)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.name} - {self.email}"
