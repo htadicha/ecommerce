@@ -9,26 +9,43 @@ from django.contrib.auth import login, authenticate, logout, get_user_model
 from .models import Customer 
 
 def store(request):
-    query = request.GET.get('q')  # Get the search query from the URL
-    if query:
-        # Filter products based on the query
-        products = Product.objects.filter(name__icontains=query)
-    else:
-        # If no query is provided, show all products
-        products = Product.objects.all()
-    
-    data = cartData(request)
+	
+	"""
+Render the store view with product filtering.
 
-    cartItems = data['cartItems']
-    order = data['order']
-    items = data['items']
+- Retrieves search query from the URL and filters products based on it.
+- If no query is provided, displays all products.
+- Includes cart data in the context for rendering.
+- Returns the store template with the filtered products and cart information.
+"""
 
-    # Pass the filtered or all products to the template, along with the query
-    context = {'products': products, 'cartItems': cartItems, 'query': query}
-    return render(request, 'store/store.html', context)
+	query = request.GET.get('q') 
+	if query:
+		
+		products = Product.objects.filter(name__icontains=query)
+	else:
+		
+		products = Product.objects.all()
+	
+	data = cartData(request)
+
+	cartItems = data['cartItems']
+	order = data['order']
+	items = data['items']
+
+	
+	context = {'products': products, 'cartItems': cartItems, 'query': query}
+	return render(request, 'store/store.html', context)
 
 
 def cart(request):
+	"""
+Render the cart and checkout views.
+
+- cart: Retrieves cart data and renders the cart template with items, order, and item count.
+- checkout: Retrieves cart data and renders the checkout template with items, order, and item count.
+"""
+
 	data = cartData(request)
 
 	cartItems = data['cartItems']
@@ -49,6 +66,17 @@ def checkout(request):
 	return render(request, 'store/checkout.html', context)
 
 def updateItem(request):
+	
+	
+	"""
+Update item quantity in the user's order.
+
+- Parses request data for product ID and action (add/remove).
+- Retrieves the customer and product, updates the order and order item.
+- Adjusts quantity or deletes the item if quantity is zero.
+- Returns a JSON response confirming the update.
+"""
+
 	data = json.loads(request.body)
 	productId = data['productId']
 	action = data['action']
@@ -56,9 +84,9 @@ def updateItem(request):
 	print('Product:', productId)
 
 	customer = request.user.customer
-	product = Product.objects.filter(id=productId).first()  # Use .first() to prevent NoneType errors
+	product = Product.objects.filter(id=productId).first()  
 
-	if product:  # Only proceed if product exists
+	if product: 
 		order, created = Order.objects.get_or_create(customer=customer, complete=False)
 		orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
 
@@ -75,6 +103,15 @@ def updateItem(request):
 	return JsonResponse('Item was added', safe=False)
 
 def processOrder(request):
+	
+	"""
+Process orders and handle payment.
+
+- Retrieves or creates an order for authenticated users or processes guest orders.
+- Verifies and completes the order if the total matches.
+- Saves the order and creates a shipping address if needed.
+- Returns a JSON response confirming payment submission.
+"""
 	transaction_id = datetime.datetime.now().timestamp()
 	data = json.loads(request.body)
 
@@ -105,50 +142,67 @@ def processOrder(request):
 
 
 
-# Create your views here.
+
 
 User = get_user_model()
 
+
+"""
+Handle user login and signup.
+
+Functions:
+- login_view: Renders the login form, authenticates the user on POST, and logs them in if credentials are valid. Redirects to the store on success or displays an error on failure.
+- signup_view: Renders the signup form, creates a new user and customer, and logs the user in after successful signup.
+"""
+
 def login_view(request):
-    # Ensure form is initialized outside the POST check to handle GET requests
-    form = LoginForm(request.POST or None)  # If it's a GET request, create an empty form
-    
-    if request.method == 'POST':
-        if form.is_valid():
-            email = form.cleaned_data.get('email')
-            password = form.cleaned_data.get('password')
-            user = authenticate(request, username=email, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('store')  # Redirect to the store after successful login
-            else:
-                form.add_error(None, "Invalid login credentials")  # Show error on invalid credentials
-    # Render the login form even on GET or invalid POST
-    return render(request, 'store/login.html', {'form': form})
+	
+	form = LoginForm(request.POST or None)  
+	
+	if request.method == 'POST':
+		if form.is_valid():
+			email = form.cleaned_data.get('email')
+			password = form.cleaned_data.get('password')
+			user = authenticate(request, username=email, password=password)
+			if user is not None:
+				login(request, user)
+				return redirect('store')  
+			else:
+				form.add_error(None, "Invalid login credentials")  
+	return render(request, 'store/login.html', {'form': form})
 
 def signup_view(request):
-    form = SignupForm(request.POST or None)  # Create an empty form on GET
+	
+	"""
+Handle user signup, logout, and home page rendering.
 
-    if request.method == 'POST':
-        if form.is_valid():
-            email = form.cleaned_data.get('email')
-            password = form.cleaned_data.get('password')
-            # Create the user using the email as the username
-            user = User.objects.create_user(username=email, email=email, password=password)
-            
-            # Automatically create a Customer associated with this User
-            Customer.objects.create(user=user, name=user.username, email=user.email)
-            
-            # Log in the user after signup
-            login(request, user)
-            return redirect('store')  # Redirect to the store after successful signup
-    
-    # Render the signup form even on GET or invalid POST
-    return render(request, 'store/sign_up.html', {'form': form})
+Functions:
+- signup_view: Renders the signup form, processes the signup request, creates a new user and customer, and logs the user in.
+- logout_view: Logs the user out and redirects to the login page.
+- home_view: Renders the homepage.
+"""
+	form = SignupForm(request.POST or None)  
+
+	if request.method == 'POST':
+		if form.is_valid():
+			email = form.cleaned_data.get('email')
+			password = form.cleaned_data.get('password')
+			
+			user = User.objects.create_user(username=email, email=email, password=password)
+			
+			
+			Customer.objects.create(user=user, name=user.username, email=user.email)
+			
+		
+			login(request, user)
+			return redirect('store')  
+	
+	
+	return render(request, 'store/sign_up.html', {'form': form})
 
 def logout_view(request):
-    logout(request)  # Log the user out
-    return redirect('login')  # Redirect to login page after logout
+	logout(request)  
+	return redirect('login')  
 
 def home_view(request):
-    return render(request, 'store.html')  # Render the home view
+	return render(request, 'store.html')  

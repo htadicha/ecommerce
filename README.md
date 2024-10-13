@@ -7,8 +7,7 @@ The user of the website each will have different experience based, whether the u
 
 [Live Project Here](https://tadichaecommercestore-6c140a2ed1bd.herokuapp.com/)
 
-<p align="center"><img src="./assets/readme/features/tasty_blog_responsiveness.jpg"
-        alt="Tasty Blog webpage on multiple devices"></p>
+[Responsiveness Can be Found Here](RESPONSIVE.md)
 
 README Table of Content
 
