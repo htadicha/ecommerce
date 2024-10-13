@@ -7,7 +7,9 @@ The user of the website each will have different experience based, whether the u
 
 [Live Project Here](https://tadichaecommercestore-6c140a2ed1bd.herokuapp.com/)
 
-[Responsiveness Can be Found Here](RESPONSIVE.md)
+The projects responsiveness is checked agains large and small screen of different size to see responsiveness. As an example one small screen responsiveness and one bigger screen responsiveness is provided in the Rmd below.
+
+[Responsiveness can be found here](RESPONSIVE.md)
 
 README Table of Content
 
