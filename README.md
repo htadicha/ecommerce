@@ -412,7 +412,9 @@ to copy the URL
 * [W3Schools - Python](https://www.w3schools.com/python/)
 * [Stack Overflow](https://stackoverflow.com/)
 * [Scrimba - Pyhton](https://scrimba.com/learn/python)
-* Google and ChatGPT capabilities leverage during manual testing and debugging for some errors
+* Google and ChatGPT capabilities leverage during manual testing and debugging for some errors.
+* CodingNepal
+* Youtube Videos.
 
 ## Special Thanks
 
