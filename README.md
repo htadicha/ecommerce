@@ -419,7 +419,7 @@ to copy the URL
 ## Special Thanks
 
 * Special thanks to Code institute and My mentor in his previous involvement i was able to apply past knowldge in ths, 
-* my colleagues at Code Institute, Kasia Bogucka, and Mairéad Gillic for
+* my colleagues at Code Institute for
 their assistance throughout this project.
 
 
