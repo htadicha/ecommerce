@@ -69,8 +69,8 @@ README Table of Content
 3. Search for products.
 4. can add products to cart and remove accordingly.
 5. I can view cart and see the totals in the cart page.
-6. I can control number of contents with the upward and downward arrow to add or reduce the number of products from cart page.
-7. I can checkout and fillin correct address in the checkout section, without having to fill my already available login information.
+6. I can control number of contents with the upward and downward arrow to add or reduce the number of products from cart page(perfomr CRUD Functionality without having to access admin).
+7. I can checkout and fill_in correct address in the checkout section, without having to fill my already available login information.
 8. I can log in
 
 * As a website superuser, I can:
