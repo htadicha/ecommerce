@@ -1,79 +1,46 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.contrib.auth import get_user_model
+from django.urls import reverse
 
-# Create your models here.
-class Customer(models.Model):
-	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
-	name = models.CharField(max_length=200, null=True)
-	email = models.CharField(max_length=200)
-
-	def __str__(self):
-		return self.name
-
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    class Meta:
+        verbose_name_plural = 'Categories'
+    def __str__(self):
+        return self.name
 
 class Product(models.Model):
-	name = models.CharField(max_length=200)
-	price = models.FloatField()
-	digital = models.BooleanField(default=False,null=True, blank=True)
-	image = models.ImageField(null=True, blank=True)
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    image = models.ImageField(upload_to='products/')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    stock = models.IntegerField(default=10)
+    is_available = models.BooleanField(default=True)
+    ratings = models.DecimalField(max_digits=3, decimal_places=2, default=4.50)
+    is_on_deal = models.BooleanField(default=False)
+    is_clearance = models.BooleanField(default=False)
 
-	def __str__(self):
-		return self.name
+    def get_url(self):
+        return reverse('store:product_detail', args=[self.category.id, self.id])
 
-	@property
-	def imageURL(self):
-		try:
-			url = self.image.url
-		except:
-			url = ''
-		return url
+    def __str__(self):
+        return self.name
 
-class Order(models.Model):
-	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True, blank=True)
-	date_ordered = models.DateTimeField(auto_now_add=True)
-	complete = models.BooleanField(default=False)
-	transaction_id = models.CharField(max_length=100, null=True)
+class ProductSize(models.Model):
+    # THE FIX: This line is required for the admin inline to work.
+    # It defines the essential link between a size and its parent product.
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='sizes', null=True, blank=True)
+    size = models.CharField(max_length=10)
+    def __str__(self):
+        return self.size
 
-	def __str__(self):
-		return str(self.id)
+class ProductGallery(models.Model):
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='gallery_images', null=True, blank=True)
+    image = models.ImageField(upload_to='store/products', max_length=255)
 
+    def __str__(self):
+        return self.product.name
 
-	@property
-	def get_cart_total(self):
-		orderitems = self.orderitem_set.all()
-		total = sum([item.get_total for item in orderitems])
-		return total 
-
-	@property
-	def get_cart_items(self):
-		orderitems = self.orderitem_set.all()
-		total = sum([item.quantity for item in orderitems])
-		return total 
-
-class OrderItem(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
-    quantity = models.IntegerField(default=0, null=True, blank=True)
-    date_added = models.DateTimeField(auto_now_add=True)
-
-    @property
-    def get_total(self):
-        if self.product:
-            total = self.product.price * self.quantity
-        else:
-            total = 0  # Return 0 if the product is None
-        return total
- 
-
-class ShippingAddress(models.Model):
-	customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
-	order = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
-	address = models.CharField(max_length=200, null=False)
-	city = models.CharField(max_length=200, null=False)
-	state = models.CharField(max_length=200, null=False)
-	zipcode = models.CharField(max_length=200, null=False)
-	date_added = models.DateTimeField(auto_now_add=True)
-
-	def __str__(self):
-		return self.address
+    class Meta:
+        verbose_name = 'productgallery'
+        verbose_name_plural = 'product gallery'

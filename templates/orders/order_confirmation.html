@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container text-center" style="padding: 100px 15px;">
+    <i class="fa fa-check-circle" style="font-size: 72px;margin-bottom: 20px; color: #5cb85c;"></i>
+    <h2>Thank You For Your Order!</h2>
+    <p class="lead">Your order has been placed successfully.</p>
+    <p>Your Order Number is: <strong>{{ order.order_number }}</strong></p>
+    <hr>
+    <p><a class="primary-btn" href="{% url 'store:product_list' %}" role="button">Continue Shopping</a></p>
+</div>
+{% endblock %}

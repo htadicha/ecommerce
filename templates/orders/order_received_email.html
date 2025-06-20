@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body style="font-family: sans-serif; line-height: 1.6;">
+    <p>Hi {{ user.first_name }},</p>
+    <p>We have received your order! Thank you for shopping with us.</p>
+    <p>Your order number is: <strong>{{ order.order_number }}</strong>.</p>
+    
+    <h3 style="color: #333;">Order Summary:</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Product</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Quantity</th>
+                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order.orderproduct_set.all %}
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;">{{ item.product.name }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">{{ item.quantity }}</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">${{ item.product_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h4 style="text-align: right;">Grand Total: ${{ order.order_total }}</h4>
+
+    <p>We will notify you again once your order has been shipped.</p>
+    <p>Thanks,<br>The Violet Team</p>
+</body>
+</html>
