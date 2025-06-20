@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     'admin_thumbnails',
 
     # My Apps (using AppConfig is recommended)
-    'store.apps.StoreConfig',
-    'accounts.apps.AccountsConfig',
-    'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig',
+    'store',
+    'accounts',
+    'cart',
+    'orders',
 ]
 
 MIDDLEWARE = [
