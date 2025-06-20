@@ -10,7 +10,7 @@ pillow==10.4.0
 
 # Project-specific Django apps
 django-admin-thumbnails==0.2.9
-django-allauth==65.3.1
+django-allauth==0.52.0
 django-bootstrap4==24.4
 django-bootstrap5==24.3
 django-ckeditor==6.7.1
