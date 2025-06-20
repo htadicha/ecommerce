@@ -12,7 +12,7 @@ pillow==10.4.0
 django-admin-thumbnails==0.2.9
 django-allauth==65.3.1
 django-bootstrap4==22.2
-django-bootstrap5==22.3
+django-bootstrap5==22.2
 django-ckeditor==6.7.1
 django-ckeditor-5==0.2.15
 django-countries==7.6.1
