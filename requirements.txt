@@ -27,3 +27,7 @@ python-decouple==3.8
 requests==2.32.3
 stripe==11.4.1
 xhtml2pdf==0.2.16
+
+#storage:
+cloudinary
+django-cloudinary-storage

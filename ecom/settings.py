@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'admin_thumbnails',
+    #storage apps
+    'cloudinary_storage', 
+    'cloudinary',
 
     # My Apps (using AppConfig is recommended)
     'store',
@@ -145,10 +148,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+#cluodinary and media config
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# Use Cloudinary for media file storage if the URL is set (i.e., in production)
+if CLOUDINARY_URL:
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+    
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
