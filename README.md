@@ -98,10 +98,10 @@ This page provides customers with a comprehensive and engaging overview of each 
 
 * **Structured Product Information:** To enhance readability and clarity, product information is not a single block of text. Instead, it is broken down into logical sections:
     * A main marketing description.
-    * Specific attributes like **Color** and **Product Code (SKU)**.
+    * Specific attributes like **Color**,and **Product Code (SKU)**.
     * A detailed section for other specifications or features.
 
-* **Clear Call to Action:** The product's name and price are displayed prominently. Users can easily select from available sizes, choose a quantity, and add the product to their cart directly from this page.
+* **Clear Call to Action:** The product's **name** and **price** are displayed prominently. Users can easily select from available **sizes**, choose a **quantity**, and add the product to their cart directly from this page.
 
 ![Cart Items](./static/readmeimg/product_detail.png)
 

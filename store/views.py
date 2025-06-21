@@ -3,6 +3,7 @@ from .models import Product, Category
 from django.db.models import Q
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Add this new view function to the end of store/views.py
 def contact(request):
@@ -52,18 +53,42 @@ def home(request):
     context = {'products': products}
     return render(request, 'store/index.html', context)
 
+# In store/views.py, make sure to import Paginator
+from django.core.paginator import Paginator
+
 def product_list(request):
-	products = Product.objects.filter(is_available=True).order_by('name')
-	product_count = products.count()
-	query = request.GET.get('q')
-	if query:
-		products = products.filter(Q(name__icontains=query) | Q(description__icontains=query))
-		product_count = products.count()
-	sort_by = request.GET.get('sort')
-	if sort_by == 'price': products = products.order_by('price')
-	elif sort_by == 'ratings': products = products.order_by('-ratings')
-	context = {'products': products, 'product_count': product_count, 'query': query}
-	return render(request, 'store/categories.html', context)
+    # Get all products initially
+    products_list = Product.objects.filter(is_available=True).order_by('name')
+
+    # Search functionality
+    query = request.GET.get('q')
+    if query:
+        products_list = products_list.filter(Q(name__icontains=query) | Q(main_description__icontains=query))
+
+    # Sorting functionality
+    sort_by = request.GET.get('sort')
+    if sort_by == 'price':
+        products_list = products_list.order_by('price')
+    elif sort_by == 'ratings':
+        products_list = products_list.order_by('-ratings')
+    elif sort_by == 'name':
+        products_list = products_list.order_by('name')
+        
+    product_count = products_list.count()
+
+    # --- Pagination Logic ---
+    paginator = Paginator(products_list, 12)  # Show 10 products per page.
+    page_number = request.GET.get('page')
+    products = paginator.get_page(page_number)
+    # --- End of Pagination Logic ---
+
+    context = {
+        'products': products, # This now sends the paginated page object
+        'product_count': product_count,
+        'query': query,
+        'sort_by': sort_by, # Pass sort_by to preserve it in pagination links
+    }
+    return render(request, 'store/categories.html', context)
 
 def product_detail(request, category_id, product_id):
 	product = get_object_or_404(Product, category__id=category_id, id=product_id)
