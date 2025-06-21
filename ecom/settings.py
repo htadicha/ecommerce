@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # In production, DEBUG must be False.
 # For local development, you can set DEBUG=True in your env.py
 # Example: os.environ['DEBUG'] = 'True'
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = False
 
 # Define the allowed hosts. In production, this should be your domain.
 ALLOWED_HOSTS = [
