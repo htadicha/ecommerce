@@ -1,4 +1,4 @@
-# E-commerce Platform
+# Ecommerce Platform
 
 ![Project Banner](./static/readmeimg/banner.png)
 
@@ -8,7 +8,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**GreatCart** is a full-stack e-commerce web application built with Python and the Django framework. It provides a complete online shopping experience, featuring robust product management, secure user authentication, and a seamless checkout process for both registered users and guests.
+**Ecommerce Platform** is a full-stack e-commerce web application built with Python and the Django framework. It provides a complete online shopping experience, featuring robust product management, secure user authentication, and a seamless checkout process for both registered users and guests.
 
 **[➡️ View the Live Project Here](https://tadichaecommercestore-6c140a2ed1bd.herokuapp.com/)**
 
