@@ -90,6 +90,21 @@ GreatCart provides a feature-rich experience tailored to different user roles, e
 - **Sorting:** Sort products by **Name**, **Price**, or **Best Rated**. The selected sort order persists.
 ![Cart Items](./static/readmeimg/sortby.png)
 
+### Product Detail Page
+
+This page provides customers with a comprehensive and engaging overview of each item, designed to give them all the information they need to make a confident purchase.
+
+* **Interactive Image Gallery:** The page features a dynamic image gallery powered by Owl Carousel. Users are presented with a large, high-quality main image and can seamlessly slide or click through multiple additional images to view the product from every angle.
+
+* **Structured Product Information:** To enhance readability and clarity, product information is not a single block of text. Instead, it is broken down into logical sections:
+    * A main marketing description.
+    * Specific attributes like **Color** and **Product Code (SKU)**.
+    * A detailed section for other specifications or features.
+
+* **Clear Call to Action:** The product's name and price are displayed prominently. Users can easily select from available sizes, choose a quantity, and add the product to their cart directly from this page.
+
+![Cart Items](./static/readmeimg/product_detail.png)
+
 #### Cart & Checkout
 
 ###### Cart
