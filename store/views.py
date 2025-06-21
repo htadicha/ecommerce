@@ -22,13 +22,13 @@ def contact(request):
 		Message:
 		{message_body}
 		"""
-		# Use Django's send_mail function
+		# Use Django's send_mail function for git_hub vistors to my site
 		try:
 			send_mail(
 				f"Contact Form: {subject}", # Email subject
 				full_message, # Email body
-				'noreply@yourdomain.com', # From email (can be a generic no-reply address)
-				['your_admin_email@example.com'], # To email (REPLACE with your actual email)
+				'noreply@domain.com', # From email (can be a generic no-reply address)
+				['mail_admin_email@example.com'], # To email (REPLACE with your actual email)
 				fail_silently=False,
 			)
 			messages.success(request, 'Thank you for your message! We will get back to you shortly.')
@@ -42,9 +42,15 @@ def contact(request):
 	return render(request, 'store/contact.html')
 
 def home(request):
-	products = Product.objects.filter(is_available=True).order_by('-ratings')[:8]
-	context = {'products': products}
-	return render(request, 'store/index.html', context)
+    # This query now filters for products that are new, on deal, OR on clearance.
+    # It also ensures they are available and orders them by newest first.
+    products = Product.objects.filter(
+        Q(is_new=True) | Q(is_on_deal=True) | Q(is_clearance=True),
+        is_available=True
+    ).order_by('-id')
+
+    context = {'products': products}
+    return render(request, 'store/index.html', context)
 
 def product_list(request):
 	products = Product.objects.filter(is_available=True).order_by('name')
