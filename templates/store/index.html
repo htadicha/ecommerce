@@ -76,11 +76,15 @@
                 </div>
             </div>
             <div class="row" id="product-list">
-                {% for product in products %}
-                <div class="col-lg-3 col-sm-6 mix all dresses bags">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="{{ product.get_url }}"><img src="{{ product.image.url }}" alt="{{ product.name }}"></a>
+                {% for product in products|slice:":12" %}
+                <!-- THE FIX: Added mb-5 (a larger margin-bottom) to create more vertical space between product rows -->
+                <div class="col-lg-3 col-sm-6 mix all dresses bags mb-5">
+                    <!-- Added h-100 to make all product cards in a row the same height -->
+                    <div class="single-product-item h-100">
+                        <figure style="height: 300px !important; overflow: hidden !important;">
+                            <a href="{{ product.get_url }}">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 290px !important; overflow: hidden !important;">
+                            </a>
                             
                             <!-- Product Status Logic -->
                             {% if product.is_new %}
@@ -94,8 +98,11 @@
 
                         </figure>
                         <div class="product-text">
-                            <h6>{{ product.name }}</h6>
-                            <p>${{ product.price }}</p>
+                            <!-- THE FIX: This new style aligns items to the left with a small gap -->
+                            <div style="display: flex; align-items: baseline;">
+                                <h6 style="margin-right: 10px;">{{ product.name }}:</h6>
+                                <p>${{ product.price }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,16 +117,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 offset-lg-1">
-                    <div class="lookbok-left">
-                        <div class="section-title">
-                            <h2>2025 <br />#lookbook</h2>
-                        </div>
-                        <p>Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vestibulum malesuada
-                            aliquet libero viverra cursus. Aliquam erat volutpat. Morbi id dictum quam, ut commodo
-                            lorem. In at nisi nec arcu porttitor aliquet vitae at dui. Sed sollicitudin nulla non leo
-                            viverra scelerisque.</p>
-                        <a href="#" class="primary-btn look-btn">See More</a>
+                    <div class="section-title">
+                        <h2>2024 <br />#lookbook</h2>
                     </div>
+                    <p>Thank you for making 2024 incredible! 💚</p>
+                    <ul>
+                        <li>🚚 3,200+ free deliveries</li>
+                        <li>💬 70+ 24/7 support chats handled</li>
+                        <li>💸 100% money-back guarantee kept, for 6 of our customers</li>
+                        <li>🛍️ Thousands of happy customers across Europe</li>
+                    </ul>
+
+                    <br>
+
+                    <p>looking foward to serve you in 2025</p>
+                    
+                    <br>
+
+
+                    <a href="#" class="primary-btn look-btn">See More</a>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="lookbok-pic">
