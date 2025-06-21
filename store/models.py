@@ -17,6 +17,7 @@ class Product(models.Model):
     stock = models.IntegerField(default=10)
     is_available = models.BooleanField(default=True)
     ratings = models.DecimalField(max_digits=3, decimal_places=2, default=4.50)
+    is_new = models.BooleanField(default=False)
     is_on_deal = models.BooleanField(default=False)
     is_clearance = models.BooleanField(default=False)
 
