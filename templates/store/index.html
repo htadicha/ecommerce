@@ -83,7 +83,7 @@
                     <div class="single-product-item h-100">
                         <figure style="height: 300px !important; overflow: hidden !important;">
                             <a href="{{ product.get_url }}">
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 290px !important; overflow: hidden !important;">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 300px !important; overflow: hidden !important;">
                             </a>
                             
                             <!-- Product Status Logic -->
@@ -117,25 +117,27 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 offset-lg-1">
-                    <div class="section-title">
-                        <h2>2024 <br />#lookbook</h2>
+                    <div class="lookbok-left">
+                        <div class="section-title">
+                            <h2>2024 <br />#lookback</h2>
+                        </div>
+                        <p>Thank you for making 2024 incredible! 💚</p>
+                        <ul style="list-style: none; padding-left: 0; margin: 0;">
+                            <li style="margin-bottom: 10px; line-height: 1.7; color: #444; font-size: 16px;">
+                                🚚 3,200+ free deliveries on orders over €100
+                            </li>
+                            <li style="margin-bottom: 10px; line-height: 1.7; color: #444; font-size: 16px;">
+                                💬 24/7 customer support – always here for you
+                            </li>
+                            <li style="margin-bottom: 10px; line-height: 1.7; color: #444; font-size: 16px;">
+                                💸 100% money-back guarantee kept, no hassle
+                            </li>
+                            <li style="margin-bottom: 10px; line-height: 1.7; color: #444; font-size: 16px;">
+                                🛍️ Thousands of happy customers across Europe
+                            </li>
+                        </ul>
+                        <a href="{% url 'store:product_list' %}"class="primary-btn look-btn">See More</a>
                     </div>
-                    <p>Thank you for making 2024 incredible! 💚</p>
-                    <ul>
-                        <li>🚚 3,200+ free deliveries</li>
-                        <li>💬 70+ 24/7 support chats handled</li>
-                        <li>💸 100% money-back guarantee kept, for 6 of our customers</li>
-                        <li>🛍️ Thousands of happy customers across Europe</li>
-                    </ul>
-
-                    <br>
-
-                    <p>looking foward to serve you in 2025</p>
-                    
-                    <br>
-
-
-                    <a href="#" class="primary-btn look-btn">See More</a>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="lookbok-pic">

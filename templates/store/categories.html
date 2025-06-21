@@ -2,75 +2,83 @@
 {% load static %}
 
 {% block content %}
-    <!-- Page Add Section Begin -->
-    <section class="page-add">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="page-breadcrumb">
-                        <h2>Shop<span>.</span></h2>
-                        <a href="{% url 'store:home' %}">Home</a>
-                        <a class="active" href="{% url 'store:product_list' %}">Shop</a>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <img src="{% static 'img/add.jpg' %}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Page Add Section End -->
+<!-- Page Add Section Begin -->
+<section class="page-add">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="page-breadcrumb">
+					<h2>Shop<span>.</span></h2>
+					<a href="{% url 'store:home' %}">Home</a>
+					<a class="active" href="{% url 'store:product_list' %}">Shop</a>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<img src="{% static 'img/add.jpg' %}" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Page Add Section End -->
 
-    <!-- Categories Page Section Begin -->
-    <section class="categories-page spad">
-        <div class="container">
-            <div class="categories-controls">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="categories-filter">
-                            <div class="cf-left">
-                                <p>{{ product_count }} Products found {% if query %} for "{{ query }}" {% endif %}</p>
-                            </div>
-                            <div class="cf-right">
-                               <form method="get">
-                                    <select name="sort" class="sort" onchange="this.form.submit()">
-                                        <option value="">Sort by</option>
-                                        <option value="ratings">Best Rated</option>
-                                        <option value="price">Price</option>
-                                    </select>
-                               </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                {% for product in products %}
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="{{ product.get_url }}">
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 330px !important; overflow: hidden !important;">
-                            </a>
-                             {% if product.is_on_deal %}
-                            <div class="p-status sale">sale</div>
-                            {% endif %}
-                        </figure>
-                        <div class="product-text">
-                            <a href="{{ product.get_url }}">
-                                <h6>{{ product.name }}</h6>
-                            </a>
-                            <p>${{ product.price }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% empty %}
-                <div class="col-12">
-                    <p>No products found.</p>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    <!-- Categories Page Section End -->
+<!-- Categories Page Section Begin -->
+<section class="categories-page spad">
+	<div class="container">
+		<div class="categories-controls">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="categories-filter">
+						<div class="cf-left">
+							<p>{{ product_count }} Products found {% if query %} for "{{ query }}" {% endif %}</p>
+						</div>
+						<div class="cf-right">
+							<form method="get">
+                                <select name="sort" class="sort" onchange="this.form.submit()">
+                                    <!-- This is the placeholder option. It is selected by default if no other sort option is active. -->
+                                    <option value="" disabled {% if not request.GET.sort %}selected{% endif %}>Sort by</option>
+                                    
+                                    <!-- The 'selected' attribute is added dynamically if the option's value matches the current sort parameter in the URL. -->
+                                    <option value="name" {% if request.GET.sort == 'name' %}selected{% endif %}>Name</option>
+                                    <option value="ratings" {% if request.GET.sort == 'ratings' %}selected{% endif %}>Best Rated</option>
+                                    <option value="price" {% if request.GET.sort == 'price' %}selected{% endif %}>Price</option>
+                                </select>
+                           </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for product in products %}
+		
+
+			<div class="col-lg-3 col-sm-6 mix all dresses bags mb-5">
+				<!-- Added h-100 to make all product cards in a row the same height -->
+				<div class="single-product-item h-100">
+		   <figure style="height: 300px !important; overflow: hidden !important;">
+					<!-- THE FIX: The sale status div is now INSIDE the link -->
+					<a href="{{ product.get_url }}">
+							<img src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 300px !important; overflow: hidden !important;">
+						{% if product.is_on_deal %}
+						<div class="p-status sale">sale</div>
+						{% endif %}
+					</a>
+				</figure>
+				<div class="product-text">
+					<a href="{{ product.get_url }}">
+						<h6>{{ product.name }}</h6>
+						<p>${{ product.price }}</p>
+					</a>
+				</div>
+			</div>
+		</div>
+			{% empty %}
+			<div class="col-12">
+				<p>No products found.</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Categories Page Section End -->
 {% endblock content %}
